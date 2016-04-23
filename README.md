@@ -7,7 +7,7 @@ With those two combinations you have all what you need to create awesome theme f
 Version: 1.0
 
 ## Desktop version
-![Desktop version](screenshots/desktop.jpg)
+![Desktop version](screenshots/desktop.jpg) 
 
 ## Tablet version
 ![Tablet version](screenshots/tablet.jpg)
