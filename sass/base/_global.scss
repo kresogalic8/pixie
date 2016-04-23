@@ -1,0 +1,84 @@
+
+/*============================
+=          Global            =
+============================*/
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	height: 100%;
+}
+	
+
+// Default body styles
+body {
+	height: 100%;
+	color: #888;
+	background: #eee;
+	font-family: $primary-font;
+	font-size: 1.5rem;
+	font-weight: 400;
+	letter-spacing: .01em;
+	line-height: 1.5;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+	
+
+// Set box-sizing globally to handle padding and border widths
+*,
+*:after,
+*:before {
+	box-sizing: inherit;
+}
+
+.container {
+	@include outer-container($container-width);
+	margin: auto;
+	@include media(max-width 1024px) {
+       padding: 0 30px;
+    }
+    @include media(max-width 480px) {
+       padding: 0 20px;
+    }
+}
+
+.main {
+	display: table;
+	background: white;
+	@include size(100% 100%);
+	.wrapper {
+	    display: table-row;
+	    height: 100%;
+	    .content-wrapper {
+	        padding-top: 50px;
+	        padding-bottom: 50px;
+	        .content {
+	        	@include span-columns(9);
+	        	@include media(max-width 767px) {
+	        		@include span-columns(12);
+	        		@include omega;
+	        	}
+        		@include media(min-width 768px max-width 1024px) {
+        	       @include span-columns(8);
+        	    }
+	        }
+	        .sidebar {
+	        	@include span-columns(3);
+	        	@include media(max-width 767px) {
+	        		@include span-columns(12);
+	        		@include omega;
+	        	}
+	        	@include media(min-width 768px max-width 1024px) {
+        	       @include span-columns(4);
+        	    }
+	        }
+	    }
+	}
+}
+
+
+

@@ -1,0 +1,33 @@
+/*!
+Theme Name: Pixie - Starter Theme
+Theme URI: http://
+Author: Krešo Galić
+Author URI: http://kgdesign.com.hr
+Description: Pixie is a WordPress Starter Theme for creating nice new themes, speed up your wordpress development and to not repeat yourself every time when you are starting new project.
+Version: 1.0
+Text Domain: pixie
+*/
+
+// Frameworks
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+// Base
+@import "base/reset";
+@import "base/variables";
+@import "base/base";
+@import "base/global";
+
+// components
+@import "components/typography";
+@import "components/forms";
+@import "components/buttons";
+@import "components/helpers";
+
+// layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/sidebar";
+
+// pages
+@import "pages/home"

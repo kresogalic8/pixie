@@ -1,0 +1,47 @@
+/*===============================
+=            Sidebar            =
+===============================*/
+.widget {
+    margin-bottom: 25px;
+    .widget-title {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 7px;
+        &:after {
+            content: '';
+            position: absolute;
+            background-image: url(img/sidebar-pattern.png);
+            background-repeat: repeat;
+            width: 1000px;
+            height: 20px;
+            display: inline-block;
+            overflow: hidden;
+            top: 50%;
+            margin: -10px 0 0 22px;
+        }
+    }
+    .sidebar-title-separator {
+        display: block;
+    }
+    .separator-holder.separator-left {
+        text-align: left;
+    }
+    .separator-holder {
+        position: relative;
+        height: auto;
+        font-size: 0;
+        line-height: 1em;
+    }
+    .separator {
+	    position: relative;
+	    display: inline-block;
+	    vertical-align: middle;
+	    border-bottom: 1px solid #b2b2b2;
+	    margin: 10px 0;
+	}
+	.separator-holder .separator {
+	    width: 30px;
+	    border-bottom-width: 2px;
+	    border-bottom-color: #ffc000;
+	}
+}

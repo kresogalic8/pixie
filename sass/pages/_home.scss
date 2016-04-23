@@ -1,0 +1,15 @@
+/*=============================
+=            Intro            =
+=============================*/
+.intro {
+	background: url('img/slider.jpg') no-repeat center center;
+	display: table;
+	@include size(100% 500px);
+	.intro-wrapper {
+		display: table-cell;
+		vertical-align: middle;
+		.intro-body {
+			max-width: 400px;
+		}
+	}
+}

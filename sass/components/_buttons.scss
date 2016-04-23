@@ -1,0 +1,55 @@
+/*===============================
+=            Buttons            =
+===============================*/
+.button,
+input[type="button"],
+input[type='reset'],
+input[type='submit'] {
+    background: $primary-color;
+    color: white;
+    padding: 1rem 2rem;
+    display: inline-block;
+    border: 2px solid $primary-color;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    line-height: 1;
+    text-transform: uppercase;
+    vertical-align: middle;
+    @include transition(all .3s ease);
+    &:active,
+    &:hover {
+        background: lighten($primary-color, 10%);
+        border-color: lighten($primary-color, 10%);
+    }
+    // sizes
+    &.small {
+        padding: 0.5rem 1rem;
+    }
+    &.big {
+        padding: 1.5rem 3rem;
+     }
+    // buttons
+    &.rounded {
+        border-radius: 30px;
+    }
+    &.outlined {
+        background: none;
+        border: 2px solid $primary-color;
+        color: $primary-color;
+        &:hover {
+            background: $primary-color;
+            color: white;
+        }
+    }
+    &.link {
+        background: none;
+        border: 2px solid transparent;
+        color: $primary-color;
+        &:hover {
+            color: lighten($primary-color, 20%);
+        }
+    }
+}
