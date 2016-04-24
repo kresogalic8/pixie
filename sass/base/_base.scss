@@ -4,100 +4,117 @@
 
 
 /*----------  Images  ----------*/
+
 .entry-content img {
-	margin: 0 0 1.5em 0;
+    margin: 0 0 1.5em 0;
 }
+
 .alignleft,
 img.alignleft {
-	display: inline;
-	float: left;
-  margin-right: 0.5em;
+    display: inline;
+    float: left;
+    margin-right: 0.5em;
 }
+
 .alignright,
 img.alignright {
-	display: inline;
-	float: right;
-  margin-left: 0.5em;
+    display: inline;
+    float: right;
+    margin-left: 0.5em;
 }
+
 .aligncenter,
 img.aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .wp-caption {
-	text-align: center;
-	margin-bottom: 0.5em;
+    text-align: center;
+    margin-bottom: 0.5em;
 }
+
 .wp-caption img {
-	border: 0 none;
-	margin: 0;
-	padding: 0;
+    border: 0 none;
+    margin: 0;
+    padding: 0;
 }
+
 .wp-caption p.wp-caption-text {
-	margin: 0;
+    margin: 0;
 }
-.wp-smiley { 
-	max-height: 1em;
-	margin:0 !important;
+
+.wp-smiley {
+    max-height: 1em;
+    margin: 0 !important;
 }
+
 .gallery dl {
-	margin: 0;
+    margin: 0;
 }
+
 .gallery-caption {
-	margin:-1.5em 0 0 0;
+    margin: -1.5em 0 0 0;
 }
 
 
 /*----------  Blockquote  ----------*/
+
 blockquote.left {
-	float: left;
-	margin-left: 0;
-	margin-right: 20px;
-	text-align: right;
-	width: 33%;
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+    text-align: right;
+    width: 33%;
 }
+
 blockquote.right {
-	float: right;
-	margin-left: 20px;
-	margin-right: 0;
-	text-align: left;
-	width: 33%;
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+    text-align: left;
+    width: 33%;
 }
+
 blockquote {
-	quotes: none;
+    quotes: none;
     position: relative;
     display: table;
     padding-left: 36px;
     border-left: 2px solid $primary-color;
     margin-bottom: 2rem;
-    h5 {
-	    display: table-cell;
-	    vertical-align: top;
-	    color: #000;
-	    line-height: 1.8333333333333333333333333333333;
-	}
-} 
+    p {
+        display: table-cell;
+        vertical-align: top;
+        color: #000;
+        font-style: italic;
+        line-height: 1.8333333333333333333333333333333;
+    }
+}
 
 
 /*----------  title  ----------*/
+
 .title {
-	background: #f4f4f4;
-	padding: 50px 0;
-	h3 {
-		font-weight: bold;
-		text-transform: uppercase;
-		text-align: center;
-		position: relative;
-		padding-bottom: 10px;
-		margin: 0;
-		&:before {
-			content: "";
-			@include position(absolute, null 0 0 0);
-			margin: auto;
-			@include size(50px 3px);
-			background: $primary-color
-		}
-	}
+    background: #f4f4f4;
+    padding: 50px 0;
+    h3 {
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        position: relative;
+        padding-bottom: 10px;
+        margin: 0;
+        &:before {
+            content: "";
+            @include position(absolute, null 0 0 0);
+            margin: auto;
+            @include size(50px 3px);
+            background: $primary-color
+        }
+    }
 }
+
+

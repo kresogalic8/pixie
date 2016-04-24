@@ -26,8 +26,8 @@
 			<div class="logo">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><h3><?php bloginfo( 'name' ); ?></h3></a>
 			</div>
+
 			<?php if(has_nav_menu('main_menu')) { ?>
-			
 			<!-- Hamburger icon -->
 			<button id="mobile-trigger" class="hamburger-icon">
 				<span></span>
@@ -50,6 +50,17 @@
 			<?php } else { ?>
 				<span class="no-menu"><?php echo esc_html__( 'Assign menu here.', 'pixie' ); ?></span>
 			<?php } ?>
+
+			<!-- Search icon -->
+			<button class="search-icon"></button>
+
+			<div class="search-wrapper">
+				<form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<input type="text" placeholder="Type something to search" value="<?php the_search_query(); ?>" name="s" id="s" required />
+					<input type="submit" id="searchsubmit" value="GO" />
+					<a href="#" class="close-icon"><img width="30px" height="30px" src="<?php echo get_stylesheet_directory_uri(); ?>/img/close.svg" alt=""></a>
+				</form>
+			</div>
 		</div>
 	</div>
 	

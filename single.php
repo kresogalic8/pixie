@@ -19,10 +19,31 @@
 				<?php while (have_posts()) : the_post(); ?>
 
 					<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-						<?php the_post_thumbnail(); ?>
-						<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-						<?php the_content(); ?>
+						<div class="post-image">
+							<?php the_post_thumbnail(); ?>
+						</div>
+						<div class="post-title">
+							<h1><?php the_title(); ?></h1>
+						</div>
+						<div class="post-content">
+							<?php the_content(); ?>
+						</div>
 					</div>
+
+					<div id="author-info">
+
+						<div id="author-avatar">
+							<?php echo get_avatar( get_the_author_meta('user_email'), '100', '' ); ?>
+						</div>
+
+
+						<div id="author-description">
+							<h3><?php the_author_link(); ?></h3>
+							<p><?php the_author_meta('description'); ?></p>
+							<span class="author-posts">See all posts by  <?php the_author_posts_link(); ?></span>
+					   </div>
+					</div>
+
 
 				<?php 
 				
@@ -30,21 +51,6 @@
 			    if ( comments_open() || get_comments_number() ) {
 				    comments_template();
 			    } ?>
-				
-				<footer class="entry-footer">
-		            <?php pixie_entry_meta(); ?>
-		                <?php
-			                edit_post_link(
-				            sprintf(
-					            /* translators: %s: Name of current post */
-					            __( 'Edit<span class="screen-reader-text"> "%s"</span>', 'pixie' ),
-					            get_the_title()
-				            ),
-				            '<span class="edit-link">',
-				            '</span>'
-			                );
-		                ?>
-	            </footer><!-- .entry-footer -->
 			
 				<?php endwhile; ?>
 

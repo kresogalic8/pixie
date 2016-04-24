@@ -1,0 +1,137 @@
+/*==============================
+=            Single            =
+==============================*/
+
+
+/*----------  post  ----------*/
+
+.post {
+    position: relative;
+    display: block;
+    .post-image {
+        img {
+            margin-bottom: 2rem;
+        }
+    }
+    .post-title {
+        h1 {
+            color: $primary-color;
+        }
+    }
+}
+
+
+/*----------  comments  ----------*/
+
+.comments-area {
+    padding-top: 2rem;
+    display: inline-block;
+    width: 100%;
+    ol.comment-list {
+        list-style: none;
+        margin: 0 0 1em;
+        padding: 0;
+        text-indent: 0;
+        li.comment {
+            padding: 2rem 0 2rem 2rem;
+            div.vcard {
+                font-size: 2rem;
+                font-family: $heading-font;
+                text-transform: uppercase;
+                font-weight: 500;
+                cite.fn {
+                    font-style: normal;
+                }
+                img.avatar {
+                    border-radius: 100%;
+                    float: left;
+                    margin: 0 1rem 0 0;
+                }
+            }
+            div.comment-meta {
+                font-size: 1.2rem;
+                font-weight: 300;
+                a {
+                    color: #ccc;
+                }
+            }
+            p {
+                font-size: 1.4rem;
+                margin: 1rem 0rem 1rem 5rem;
+            }
+            ul {
+                font-size: 1.4rem;
+                list-style: square;
+                margin: 0 0 1em 2em;
+            }
+            div.reply {
+                font-size: 1.2rem;
+                font-family: $heading-font;
+                text-transform: uppercase;
+                a {
+                    font-weight: bold;
+                    margin-left: 5rem;
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                }
+            }
+            ul.children {
+                list-style: none;
+                margin: 1em 0 0;
+                text-indent: 0;
+                li.depth-2 {
+                    border-left: 5px dashed #555;
+                    margin: 0 0 .25em .25em;
+                }
+                li.depth-3 {
+                    border-left: 5px dashed #999;
+                    margin: 0 0 .25em .25em;
+                }
+                li.depth-4 {
+                    border-left: 5px dashed #bbb;
+                    margin: 0 0 .25em .25em;
+                }
+            }
+            .comment-body {
+            	border-bottom: 1px dashed #ccc;
+            	padding-bottom: 2rem;
+            }
+        }
+    }
+}
+
+
+/*----------  author  ----------*/
+
+#author-info {
+    float: left;
+    padding: 2rem 0;
+    border-top: 1px dashed #ccc;
+    border-bottom: 1px dashed #ccc;
+    margin: 4rem 0;
+    .avatar {
+        position: relative;
+        top: 0;
+        left: 0;
+        float: left;
+    	border-radius: 100%;
+    	margin: 2rem 0;
+    }
+}
+
+#author-description {
+    margin-left: 14rem;
+    h3 {
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    .author-posts {
+    	display: block;
+    	margin-top: 1rem;
+    	text-align: right;
+    	a {
+    		font-weight: bold;
+    		text-transform: uppercase;
+    	}
+    }
+}

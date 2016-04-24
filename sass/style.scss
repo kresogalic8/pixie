@@ -1,10 +1,14 @@
 /*!
 Theme Name: Pixie - Starter Theme
-Theme URI: http://
+Theme URI: https://github.com/kresogalic8/pixie
 Author: Krešo Galić
 Author URI: http://kgdesign.com.hr
 Description: Pixie is a WordPress Starter Theme for creating nice new themes, speed up your wordpress development and to not repeat yourself every time when you are starting new project.
 Version: 1.0
+License: MIT
+License URI: https://github.com/kresogalic8/pixie/blob/master/LICENSE
+Tags: two-columns, right-sidebar, fixed-layout, responsive-layout, custom-menu, featured-images, threaded-comments, translation-ready
+
 Text Domain: pixie
 */
 
@@ -28,6 +32,7 @@ Text Domain: pixie
 @import "layout/header";
 @import "layout/footer";
 @import "layout/sidebar";
+@import "layout/single";
 
 // pages
 @import "pages/home"

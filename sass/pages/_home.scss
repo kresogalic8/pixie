@@ -2,7 +2,7 @@
 =            Intro            =
 =============================*/
 .intro {
-	background: url('img/slider.jpg') no-repeat center center;
+	background: url('img/slider.jpg') no-repeat center center / cover;
 	display: table;
 	@include size(100% 500px);
 	.intro-wrapper {
