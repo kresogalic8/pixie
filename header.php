@@ -2,19 +2,17 @@
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
-    <title><?php wp_title(); ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11" />
-    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+    <?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<?php endif; ?>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!-- Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
+    
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 
 <div class="main">
 
@@ -26,7 +24,7 @@
 		<div class="container">
 			<!-- Logo -->
 			<div class="logo">
-				<a href="<?php echo home_url(); ?>"><h3>Pixie</h3></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><h3><?php bloginfo( 'name' ); ?></h3></a>
 			</div>
 			<?php if(has_nav_menu('main_menu')) { ?>
 			
@@ -50,7 +48,7 @@
 			  wp_nav_menu( $defaults );
 			?>
 			<?php } else { ?>
-				<span class="no-menu">Assign menu here.</span>
+				<span class="no-menu"><?php echo esc_html__( 'Assign menu here.', 'pixie' ); ?></span>
 			<?php } ?>
 		</div>
 	</div>
