@@ -6,14 +6,8 @@ With those two combinations you have all what you need to create awesome theme f
 
 Version: 1.0
 
-## Desktop version
-![Desktop version](screenshots/desktop.jpg) 
-
-## Tablet version
-![Tablet version](screenshots/tablet.jpg)
- 
-## Mobile version
-![Mobile version](screenshots/mobile.jpg)
+## Demo preview
+Click [Pixie Demo](http://pixie.kgdesign.com.hr/) to preview demo site. 
 
 ## Usage
 
