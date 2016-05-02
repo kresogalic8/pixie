@@ -16,7 +16,7 @@ Click [Pixie Demo](http://pixie.kgdesign.com.hr/) to preview demo site.
 Clone repository to your folder in wp-content/themes.
 
 ```
-https://github.com/kresogalic8/emerald.git
+https://github.com/kresogalic8/pixie.git
 ```
 
 ### 2. Rename folder name (optional)
@@ -24,7 +24,7 @@ https://github.com/kresogalic8/emerald.git
 After cloning repository, rename folder name however you want - for example "emerald". After renaming you need to change gulpfile.js with your new theme name. Here is the line where you need to change theme name: 
 
 ```
-proxy   : "http://localhost/emerald/"
+proxy   : "http://localhost/pixie/"
 ```
 
 ### 3. Install Gulp dependencies
