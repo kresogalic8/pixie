@@ -32,7 +32,9 @@ Text Domain: pixie
 @import "layout/header";
 @import "layout/footer";
 @import "layout/sidebar";
+@import "layout/blog";
 @import "layout/single";
 
 // pages
-@import "pages/home"
+@import "pages/home";
+@import "pages/woocommerce";

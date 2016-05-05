@@ -1,8 +1,9 @@
 /*===============================
 =            Sidebar            =
 ===============================*/
-.widget {
+.sidebar .widget {
     margin-bottom: 25px;
+    list-style-type: none;
     .widget-title {
         position: relative;
         overflow: hidden;
@@ -44,4 +45,69 @@
 	    border-bottom-width: 2px;
 	    border-bottom-color: #ffc000;
 	}
+    
+}
+
+// Woocommerce
+.widget_products {
+    .product_list_widget {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+            display: table;
+            width: 100%;
+            margin-bottom: 2rem;
+            img {
+                max-width: 50px; 
+                float: left;
+                margin-right: 1rem
+            }
+            del {
+                font-size: 1.2rem;
+                margin-right: 0.5rem;
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+.product-categories {
+    padding: 2rem 0;
+    li {
+        text-transform: uppercase;
+        font-weight: bold;
+        .children {
+            padding: 1rem 2rem;
+            li {
+                text-transform: initial;
+                font-weight: 500;
+                a {
+                    color: #aaa;
+                }
+            }
+        }
+        span.count {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+.tagcloud {
+    margin-top: 2rem;
+    a {
+        background: #eee;
+        padding: 5px 10px;
+        border-radius: 30px;
+        color: $secondary-color;
+        border: 1px solid #ccc;
+        @include transition(all .3s ease-in-out);
+        margin-bottom: 0.5rem;
+        display: inline-block;
+        &:hover {
+            background: $secondary-color;
+            border-color: $secondary-color;
+            color: white;
+        }
+    }
 }

@@ -1,0 +1,29 @@
+.posts {
+    .post {
+        display: block;
+        border-bottom: 1px dashed #ccc;
+        margin-bottom: 4rem;
+        .post__image {
+            overflow: hidden;
+            margin-bottom: 1rem;
+            img {
+                @include transition(all .3s ease-in-out);
+                display: block;
+                &:hover {
+                    @include transform(scale(1.1) rotate(1deg));
+                    opacity: 0.8;
+                }
+            }
+            
+        }
+        .post__title {
+            a {
+                color: $secondary-color;
+                font-weight: 500;
+                &:hover {
+                    text-decoration: underline;
+                }
+            } 
+        }
+    }
+}

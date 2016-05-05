@@ -61,6 +61,8 @@
 					<a href="#" class="close-icon"><img width="30px" height="30px" src="<?php echo get_stylesheet_directory_uri(); ?>/img/close.svg" alt=""></a>
 				</form>
 			</div>
+			
+			
 		</div>
 	</div>
 	

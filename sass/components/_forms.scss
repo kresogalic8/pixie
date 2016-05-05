@@ -10,18 +10,52 @@ input[type="text"], input[type="email"], input[type="password"], input[type="tel
     box-shadow: inset 0 0 0 1px #ccc;
     padding: 1.1rem 1.5rem;
     transition: all .2s ease;
+    width: 100%;
     &:focus {
         box-shadow: inset 0 0 0 1px $color-text;
     }
 }
 
 label {
-    display: block;
+    display: inline-block;
     margin-bottom: 0.5rem;
     font-family: $heading-font;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 1.1rem;
+}
+
+select, .select2-container .select2-choice>.select2-chosen {
+    @include appearance(none);
+    background: white url('./img/arrow-down.svg') no-repeat center right 1.5rem / 14px;
+    padding: 1.1rem 1.5rem;
+    outline: none;
+    font-size: 1.4rem;
+    border-radius: 0;
+    margin: 0;
+}
+
+.required {
+    color: red;
+}
+
+.select2-container .select2-choice {
+    padding: 0;
+}
+.select2-arrow {
+    display: none !important; 
+}
+
+.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+    @include media(max-width 767px) {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #ddd;
+    }
 }
 
 /*=====  End of INPUTS  ======*/

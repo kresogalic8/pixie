@@ -51,6 +51,8 @@ gulp
 4. Mixin library Bourbon
 5. Flexible grid with Neat
 6. Gulp for processing all SASS, JavaScript and images, and cross-device refreshing with BrowserSync
+7. Woocommerce compatible
+8. Blog layout 
 
 ### Contributing:
 

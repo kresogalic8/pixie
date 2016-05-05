@@ -65,6 +65,9 @@ img {
         		@include media(min-width 768px max-width 1024px) {
         	       @include span-columns(8);
         	    }
+				&.full-width {
+					@include span-columns(12);
+				}
 	        }
 	        .sidebar {
 	        	@include span-columns(3);
@@ -79,6 +82,3 @@ img {
 	    }
 	}
 }
-
-
-

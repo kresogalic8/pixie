@@ -18,6 +18,18 @@
             color: $primary-color;
         }
     }
+    
+}
+
+.page.hentry {
+    ul {
+        padding-left: 2rem;
+        list-style-type: disc;
+        li {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
 }
 
 

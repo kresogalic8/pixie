@@ -2,16 +2,126 @@
 =            Footer            =
 ==============================*/
 .footer {
-	background: #282828;
+	background: #f4f4f4;
 	@include size(100% auto);
-	padding: 20px 0;
 	text-align: center;
-	box-shadow: 0px -2px 5px rgba(black, 0.1);
-	span {
-		color: white;
-		text-transform: uppercase;
-		font-size: 1.2rem;
-		font-weight: bold;
-		font-family: $heading-font;
+	
+	// Footer widgets
+	.footer__widgets {
+		.footer__column {
+			@include span-columns(3);
+			@include omega(4n);
+			@include media(max-width 767px) {
+				@include span-columns(12);
+				@include omega;
+				text-align: center;
+			}
+			padding: 5rem 0;
+			text-align: left;
+			.widget {
+				list-style-type: none;
+				.widget-title {
+					background-color: inherit;
+					border: none !important;
+					color: #000;
+					font-size: 1.6rem;
+					font-weight: 600;
+					letter-spacing: 1px;
+					margin: 0;
+					padding: 0 0 10px;
+					text-transform: uppercase;
+				}
+				ul {
+					li {
+						display: block;
+						a {
+							color: #aaa;
+							font-size: 1.2rem;
+							font-weight: 500;
+							@include transition(all .2s ease-in-out);
+							&:hover {
+								color: $secondary-color;
+							}
+						}
+					}
+				}
+				.contacts-info address {
+					border: medium none;
+					color: #666;
+					display: block;
+					font-size: 1.2rem;
+					font-style: normal;
+					line-height: 1.5em;
+					margin: 5px auto 18px;
+					padding-bottom: 0px;
+					padding-top: 5px;
+					font-weight: 500;
+				}
+				.phone-footer {
+					overflow: hidden;
+					font-size: 1.2rem;
+					line-height: 35px;
+					color: #666;
+					margin-bottom: 15px;
+					margin-top: 12px;
+					font-weight: 500;
+				}
+				.email-footer {
+					overflow: hidden;
+					margin-top: 15px;
+					font-size: 1.2rem;
+					padding-bottom: 28px;
+				}
+			}
+		}
+	}
+	// Footer bottom
+	.footer__bottom {
+		display: table;
+		width: 100%;
+		border-top: 1px solid #e5e5e5;
+		// Copyright
+		.copyright {
+			padding: 2rem 0;
+			float: left;
+			@include media(max-width 767px) {
+				float: none;
+			}
+			span {
+				color: #aaa;
+				font-size: 1.2rem;
+				font-weight: 500;
+			}
+		}
+		// Footer menu
+		.footer__menu {
+			float: right;
+			@include media(max-width 767px) {
+				float: none;
+			}
+			ul {
+				line-height: 62px;
+				li {
+					display: inline-block;
+					margin-left: 2rem;
+					a {
+						color: #aaa;
+						font-size: 1.2rem;
+						font-weight: 500;
+						font-family: $heading-font;
+						@include transition(all .3s ease-in-out);
+						&:hover {
+							color: $secondary-color;
+						}
+					}
+				}
+			}
+		}
+		// No menu
+		span.no-menu {
+			float: right;
+			padding: 2rem 0;
+			font-size: 1.2rem;
+		}
 	}
 }

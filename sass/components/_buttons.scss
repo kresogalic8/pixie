@@ -6,12 +6,12 @@ input[type="button"],
 input[type='reset'],
 input[type='submit'] {
     background: $primary-color;
-    color: white;
+    color: black;
     padding: 1rem 2rem;
     display: inline-block;
     border: 2px solid $primary-color;
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
     outline: none;
     text-decoration: none;
@@ -50,6 +50,13 @@ input[type='submit'] {
         color: $primary-color;
         &:hover {
             color: lighten($primary-color, 20%);
+        }
+    }
+    &.add_to_cart_button {
+        background: $primary-color url('img/cart.svg') no-repeat center left 2rem / 20px;
+        padding-left: 5rem;
+        &:hover {
+            background: lighten($primary-color, 10%) url('img/cart.svg') no-repeat center left 2rem / 20px;
         }
     }
 }

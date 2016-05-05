@@ -5,6 +5,13 @@ function pixie_content_width() {
 }
 add_action( 'after_setup_theme', 'pixie_content_width', 0 );
 
+// featured image support
+add_theme_support( 'post-thumbnails' );
+
+// Custom image size
+add_image_size( 'blog-image', 800, 300, true ); // Hard Crop Mode
+
+
 function pixie_setup() {	
 	/*
 	 * Make theme available for translation.
@@ -93,8 +100,6 @@ function pixie_styles_and_scripts() {
 }
 add_action('wp_enqueue_scripts', 'pixie_styles_and_scripts');
 
-
-
 // register sidebar widgets
 function pixie_sidebars() {
 
@@ -117,7 +122,47 @@ function pixie_sidebars() {
 		'before_title' => '<h5 class="widget-title">',
 		'after_title' => '</h5><div class="separator-holder sidebar-title-separator separator-left"><div class="separator"></div></div>',
 	) );
-	}
+	
+	register_sidebar( array(
+		'name' =>__( 'Footer left sidebar', 'pixie'),
+		'id' => 'footer_left_sidebar',
+		'description' => __( 'Footer sidebar', 'pixie' ),
+		'before_title' => '<h5 class="widget-title">',
+		'after_title' => '</h5>',
+	) );
+	
+	register_sidebar( array(
+		'name' =>__( 'Footer left middle sidebar', 'pixie'),
+		'id' => 'footer_left_middle_sidebar',
+		'description' => __( 'Footer sidebar', 'pixie' ),
+		'before_title' => '<h5 class="widget-title">',
+		'after_title' => '</h5>',
+	) );
+	
+	register_sidebar( array(
+		'name' =>__( 'Footer right middle sidebar', 'pixie'),
+		'id' => 'footer_right_middle_sidebar',
+		'description' => __( 'Footer sidebar', 'pixie' ),
+		'before_title' => '<h5 class="widget-title">',
+		'after_title' => '</h5>',
+	) );
+	
+	register_sidebar( array(
+		'name' =>__( 'Footer right sidebar', 'pixie'),
+		'id' => 'footer_right_sidebar',
+		'description' => __( 'Footer sidebar', 'pixie' ),
+		'before_title' => '<h5 class="widget-title">',
+		'after_title' => '</h5>',
+	) );
+	
+	register_sidebar( array(
+		'name' =>__( 'Shop sidebar', 'pixie'),
+		'id' => 'shop_sidebar',
+		'description' => __( 'Shop sidebar', 'pixie' ),
+		'before_title' => '<h5 class="widget-title">',
+		'after_title' => '</h5>',
+	) );
+}
 
 add_action( 'widgets_init', 'pixie_sidebars' );
 
@@ -125,3 +170,19 @@ add_action( 'widgets_init', 'pixie_sidebars' );
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
+
+
+// Removing breadcrumbs - woocommerce
+add_action( 'init', 'jk_remove_wc_breadcrumbs' );
+function jk_remove_wc_breadcrumbs() {
+    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+}
+
+// Disable css - woocommerce
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
+// Display 9 products per page
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 9;' ), 20 );
+
+// Removing cross sells from cart view
+remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display');

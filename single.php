@@ -61,7 +61,11 @@
 			</div>
 			<div class="sidebar">
 				<!-- Blog sidebar -->
-				<?php dynamic_sidebar( 'blog_sidebar' ); ?>
+				<?php if(is_active_sidebar( 'blog_sidebar')) {  ?>
+					<?php dynamic_sidebar( 'blog_sidebar' ); ?>
+				<?php } else { ?>
+					<span><?php _e('Assign sidebar here.', 'pixie') ?></span>
+				<?php } ?>
 			</div>
 		</div>
 	</div>
