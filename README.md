@@ -4,7 +4,7 @@ Pixie is a WordPress Starter Theme for creating nice new themes, speed up your w
 
 With those two combinations you have all what you need to create awesome theme for your client. 
 
-Version: 1.0
+Version: 1.1
 
 ## Demo preview
 Click [Pixie Demo](http://pixie.kgdesign.com.hr/) to preview demo site. 
